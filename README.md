@@ -1,2 +1,3 @@
 # AdventOfCode
- Repo for advent of code 2021
+ Repo for Advent of Code 2021
+ I'm using Javascript
