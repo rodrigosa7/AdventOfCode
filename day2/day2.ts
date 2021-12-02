@@ -10,18 +10,19 @@ var newY = 0;
 var aim = 0;
 input.forEach((line) => {
   var linha = line.split(" ") as Array<String>;
+  var valor = parseInt(linha[1].toString());
 
   if (linha[0] == "forward") {
-    x += parseInt(linha[1].toString());
-    newY += aim * parseInt(linha[1].toString());
+    x += valor;
+    newY += aim * valor;
   }
   if (linha[0] == "up") {
-    y -= parseInt(linha[1].toString());
-    aim -= parseInt(linha[1].toString());
+    y -= valor;
+    aim -= valor;
   }
   if (linha[0] == "down") {
-    y += parseInt(linha[1].toString());
-    aim += parseInt(linha[1].toString());
+    y += valor;
+    aim += valor;
   }
 });
 var result = x * y;
