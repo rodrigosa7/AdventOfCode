@@ -20,13 +20,12 @@ fs.readFile("input.txt", "utf8", (err: string, data: string) => {
   var part2 = 0;
   var acc = 1;
 
-  var coisa = Math.floor(
+  var media = Math.floor(
     puzzle.reduce((acc, curr) => acc + curr, 0) / puzzle.length
   );
-  console.log("COISA", coisa);
 
   part2 = puzzle.reduce((acc, val) => {
-    const distance = Math.abs(val - coisa);
+    const distance = Math.abs(val - media);
     const consumption = (distance * (distance + 1)) / 2;
 
     return acc + consumption;
