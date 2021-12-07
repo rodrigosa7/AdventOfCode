@@ -18,16 +18,12 @@ fs.readFile("input.txt", "utf8", (err: string, data: string) => {
     }
   });
   var part2 = 0;
-  var acc = 1;
-
   var media = Math.floor(
     puzzle.reduce((acc, curr) => acc + curr, 0) / puzzle.length
   );
-
   part2 = puzzle.reduce((acc, val) => {
     const distance = Math.abs(val - media);
     const consumption = (distance * (distance + 1)) / 2;
-
     return acc + consumption;
   }, 0);
   console.info("PART2", part2);
